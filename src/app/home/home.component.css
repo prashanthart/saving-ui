@@ -1,0 +1,37 @@
+.container{
+    /* border: 1px solid red; */
+    margin: 10px 10px;
+    height: 25vh;
+    border-radius: 30px;
+    padding:10px;
+    /* background: linear-gradient(161deg, rgba(255, 123, 0, 0.642) 0%, rgb(255, 230, 7) 53%, rgba(183, 129, 58, 0.756) 100%); */
+    background-color: rgb(13, 117, 235);
+    box-shadow: 0px 1px 9px 0px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading{
+    text-align: center;
+    color: white;
+    
+
+}
+/* 
+.semi-circle{
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    margin-right:5px ;
+    z-index: 10;
+    background-color: white;
+    border: 1px solid red;
+    box-shadow: inset 0px 0px 4px black, inset 0px 0px 4px white; 
+    border-right:none ;
+    border-top-right-radius: 0px;
+
+    border-bottom-right-radius:0px ;
+} */
