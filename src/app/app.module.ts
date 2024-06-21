@@ -9,7 +9,8 @@ import { AddUserComponent } from './add-user/add-user.component';
 import { HomeComponent } from './home/home.component';
 import { InfoCardsComponent } from './info-cards/info-cards.component';
 import { BankFormComponent } from './bank-form/bank-form.component';
-import { GetUserComponent } from './get-user/get-user.component'
+import { GetUserComponent } from './get-user/get-user.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { GetUserComponent } from './get-user/get-user.component'
     HomeComponent,
     InfoCardsComponent,
     BankFormComponent,
-    GetUserComponent
+    GetUserComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
