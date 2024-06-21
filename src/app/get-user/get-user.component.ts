@@ -11,18 +11,22 @@ import { NgModel } from '@angular/forms';
 export class GetUserComponent implements OnInit {
   users:any[]=[];
   @ViewChild("userId") userId!:any;
+  loading:boolean=false;
  
   constructor(private savingsServiceService:SavingsServiceService){}
   ngOnInit(){
+  this.loading=true;
     this.savingsServiceService.getUsers().subscribe({
       next:(data)=>{
+        this.loading = true;  
         this.users = data;
+        this.loading = false;
       },
       error:(err)=>{
 
       }
     })
-    
+   
   }
   deleteUser(){
     this.savingsServiceService.deleteUser(this.userId.value).subscribe({
