@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { User } from '../models/User.model';
 import { Bank } from '../models/Bank.model';
 import { HttpBackend } from '@angular/common/http';
+import { SavingsServiceService } from '../savings-service.service';
 
 @Component({
   selector: 'app-add-user',
@@ -22,11 +23,11 @@ export class AddUserComponent {
     name: '',
     bank:[]
   }
-  constructor(){}
+  constructor(private savingsServiceService:SavingsServiceService){}
   
 
   getBankCountArray():any{
-    
+    // console.log(this.userForms);
     return new Array(+this.bankCount);
     }
 
@@ -36,10 +37,29 @@ export class AddUserComponent {
    console.log(this.userForms);
    this.userObject.userId = this.userForms.value.userId;
    this.userObject.name = this.userForms.value.name;
-  //  if(this.userForms.value.bankOption=="Yes"){
-  //   this.userObject.bank=[{this}]
-  //  }
+   if(this.selectedOption==='Yes'){
+    let bnkCount:number = +this.bankCount;
+    for(let i=0;i<bnkCount;i++){
+      let bank:any;
+      let userId = this.userForms.value.userId;
+      let name = this.userForms.value['bankName_'+i];
+      let amount =  this.userForms.value['amount_'+i];
+      bank = {userId,name,amount};
+      this.userObject.bank.push(bank);
+    }
+   }
+   else{
+    this.userObject.bank = [];
+   }
   this.userForms.reset();
+  this.savingsServiceService.createUser(this.userObject).subscribe({
+    next:(res)=>{
+      console.log(res);
+    },
+    error:(err)=>{
+      console.log(err);
+    }
+  });
 }
 
 }

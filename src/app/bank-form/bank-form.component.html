@@ -1,0 +1,26 @@
+
+    <div class="bank_card">
+        <div class="form-group">
+          <label for="">Bank {{index+1}}</label>
+          <input
+            [id]="'bankName_' + index"
+            type="text"
+            placeholder="Enter your bank name"
+            ngModel
+            [name]="'bankName_' + index"
+            #bank="ngModel"
+          />
+        </div>
+        <div class="form-group">
+          <label for="">Amount</label>
+          <input
+            [id]="'amount_' + index"
+            type="number"
+            placeholder="Enter your initial amount"
+            ngModel
+            [name]="'amount_' + index"
+            #amount="ngModel"
+            autocomplete="off"
+          />
+        </div>
+    </div>

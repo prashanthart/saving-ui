@@ -27,7 +27,8 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "sourceMap": true 
           },
           "configurations": {
             "production": {
@@ -43,18 +44,19 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "sourceMap": true 
             },
             "development": {
               "buildOptimizer": false,
               "optimization": false,
               "vendorChunk": true,
               "extractLicenses": false,
-              "sourceMap": true,
+              "sourceMap": true,  
               "namedChunks": true
             }
           },
-          "defaultConfiguration": "production"
+          "defaultConfiguration": "development" 
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -66,7 +68,7 @@
               "browserTarget": "family-savings-app:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development" 
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",

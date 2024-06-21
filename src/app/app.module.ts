@@ -7,14 +7,18 @@ import {HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AddUserComponent } from './add-user/add-user.component';
 import { HomeComponent } from './home/home.component';
-import { InfoCardsComponent } from './info-cards/info-cards.component'
+import { InfoCardsComponent } from './info-cards/info-cards.component';
+import { BankFormComponent } from './bank-form/bank-form.component';
+import { GetUserComponent } from './get-user/get-user.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     AddUserComponent,
     HomeComponent,
-    InfoCardsComponent
+    InfoCardsComponent,
+    BankFormComponent,
+    GetUserComponent
   ],
   imports: [
     BrowserModule,

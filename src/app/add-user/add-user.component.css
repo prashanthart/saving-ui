@@ -10,9 +10,7 @@
 
 }
 
-.form-group{
-    margin: 10px 5px;
-}
+
 .radio-wrapper{
     display: flex;
 }
@@ -31,6 +29,9 @@ height: 20px;
 }
 .radio-wrapper p{
     margin: 0px 10px;
+}
+.form-group{
+    margin: 10px 5px;
 }
 
 
